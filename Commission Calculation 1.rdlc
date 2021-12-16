@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="SalespersonTableCaptionSalespersonFilter">
+          <DataField>SalespersonTableCaptionSalespersonFilter</DataField>
+        </Field>
+        <Field Name="SalesInvoiceLineTableCaptionSalesInvLineFilter">
+          <DataField>SalesInvoiceLineTableCaptionSalesInvLineFilter</DataField>
+        </Field>
+        <Field Name="SalespersonName">
+          <DataField>SalespersonName</DataField>
+        </Field>
+        <Field Name="SalespersonCommissionAmount">
+          <DataField>SalespersonCommissionAmount</DataField>
+        </Field>
+        <Field Name="SalespersonCommissionAmountFormat">
+          <DataField>SalespersonCommissionAmountFormat</DataField>
+        </Field>
+        <Field Name="SalesInvLinePostDate">
+          <DataField>SalesInvLinePostDate</DataField>
+        </Field>
+        <Field Name="SalesInvLineCustomerName">
+          <DataField>SalesInvLineCustomerName</DataField>
+        </Field>
+        <Field Name="SalesInvLineDocNo">
+          <DataField>SalesInvLineDocNo</DataField>
+        </Field>
+        <Field Name="SalesInvLineSalespersonName">
+          <DataField>SalesInvLineSalespersonName</DataField>
+        </Field>
+        <Field Name="SalesInvLineDescription">
+          <DataField>SalesInvLineDescription</DataField>
+        </Field>
+        <Field Name="SalesInvLineQuantity">
+          <DataField>SalesInvLineQuantity</DataField>
+        </Field>
+        <Field Name="SalesInvLineQuantityFormat">
+          <DataField>SalesInvLineQuantityFormat</DataField>
+        </Field>
+        <Field Name="SalesInvLineAreaName">
+          <DataField>SalesInvLineAreaName</DataField>
+        </Field>
+        <Field Name="SalesInvLineAmountExclVAT">
+          <DataField>SalesInvLineAmountExclVAT</DataField>
+        </Field>
+        <Field Name="SalesInvLineAmountExclVATFormat">
+          <DataField>SalesInvLineAmountExclVATFormat</DataField>
+        </Field>
+        <Field Name="SalesInvLineAmountInclVAT">
+          <DataField>SalesInvLineAmountInclVAT</DataField>
+        </Field>
+        <Field Name="SalesInvLineAmountInclVATFormat">
+          <DataField>SalesInvLineAmountInclVATFormat</DataField>
+        </Field>
+        <Field Name="SalesInvLineCommissionRate">
+          <DataField>SalesInvLineCommissionRate</DataField>
+        </Field>
+        <Field Name="SalesInvLineCommissionRateFormat">
+          <DataField>SalesInvLineCommissionRateFormat</DataField>
+        </Field>
+        <Field Name="SalesInvLineCommissionAmount">
+          <DataField>SalesInvLineCommissionAmount</DataField>
+        </Field>
+        <Field Name="SalesInvLineCommissionAmountFormat">
+          <DataField>SalesInvLineCommissionAmountFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

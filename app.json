@@ -1,0 +1,33 @@
+{
+  "id": "01bf070c-d1ab-4dc2-b378-e28918cb13ad",
+  "name": "Dental Axess BC",
+  "publisher": "BC Price",
+  "version": "18.0.0.7",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "appId": "2cad513f-8690-4874-9028-891b8d4e9c50",
+      "name": "VSProject - Webportal Integration",
+      "version": "1.0.2.1",
+      "publisher": "Sandham Adams Inc."
+    }
+   ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "18.0.0.0",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 99999
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://DentalAxessBC.com/help/",
+  "showMyCode": false,
+  "runtime": "7.0"
+}
